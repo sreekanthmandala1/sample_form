@@ -1,0 +1,175 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--bootstrap cdn-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!--fontawesome cdn-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+  <div class="row">
+    <div class="col-lg-3">
+
+    </div>
+    <div class="col-lg-6"  >
+      <div class="container" id="fullform" >
+        <h2 id="registration"><b>Registration Form</b></h2>
+
+        <form #registration="ngForm">
+          <div style="margin-left:25%">
+          <div class="form-inline">
+            <span >
+              <div class="input-group mb-3" >
+                <div class="input-group-prepend" >
+                 
+                  <span class="input-group-text" id="besideinput" ><i class="fas fa-user" ></i></span>
+                </div>
+                  <input class="form-control block" type="text" placeholder="First Name" name="firstname" #firstname="ngModel" [ngModel] required>
+              </div>
+            </span>
+          </div>
+          <div class="form-inline" >
+            <span >
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  
+                  <span class="input-group-text" id="besideinput"><i class="fas fa-user"></i></span>
+                </div>
+                  <input class="form-control" type="text" placeholder="Last Name" name="lastname" #lastname="ngModel" [ngModel] required>
+              </div>
+            </span>
+          </div>
+
+
+          <div class="form-inline" >
+            <span >
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  
+                  <span class="input-group-text" id="besideinput"><i class="fas fa-th-list"></i></span>
+                </div>
+              <input class="form-control" type="text" placeholder="Department/Office"  name="office" #office="ngModel" [ngModel]>
+            </div>
+            </span>
+          </div>
+          <div class="form-inline" >
+            <span >
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  
+                  <span class="input-group-text" id="besideinput"><i class="fas fa-user"></i></span>
+                </div><div>
+                  <input class="form-control" type="text" placeholder="Username" name="username" #username="ngModel" [ngModel] required minlength="5" pattern="[A-Z]{1,}"></div>
+                  <div *ngIf="username.errors && username.touched" id="phonemust">
+                    <span *ngIf="username.errors.required" ><b>username required</b></span>
+                    <span *ngIf="username.errors.minlength"><b>minimum 5 digits</b></span>
+                    <div>
+                    <span *ngIf="username.errors.pattern"><b>pattern should be capital from A to Z</b></span>
+                  </div>
+                  </div>
+              </div>
+            </span>
+          </div>
+          <div class="form-inline" >
+            <span >
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  
+                  <span class="input-group-text" id="besideinput"><i class="fas fa-key"></i></span>
+                </div>
+                  <input class="form-control" type="password" placeholder="Password" name="password" #password="ngModel" [ngModel] required>
+              </div>
+            </span>
+          </div>
+          <div class="form-inline" >
+            <span >
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                 
+                  <span class="input-group-text" id="besideinput"><i class="fas fa-key"></i></span>
+                </div>
+                  <input class="form-control" type="password" placeholder="Confirm Password" name="confirmpassword" #confirmpassword="ngModel" [ngModel] required>
+              </div>
+            </span>
+          </div>
+          <div class="form-inline" >
+            <span >
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  
+                  <span class="input-group-text" id="besideinput"><i class="fas fa-envelope-open-text"></i></span>
+                </div>
+                  <input class="form-control" type="text" placeholder="E-mail" name="email" #email="ngModel" [ngModel] required>
+              </div>
+            </span>
+          </div>
+          <div class="form-inline" >
+            <span >
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  
+                  <span class="input-group-text" id="besideinput"><i class="fas fa-phone-alt"></i></span>
+                </div>
+                  <input class="form-control input-lg" type="text" placeholder="Phone"  name="phone" #phone="ngModel" [ngModel] required minlength=10 >
+                  <div *ngIf="phone.errors && phone.touched" id="phonemust">
+                    <span *ngIf="phone.errors.required" ><b>Phone number is must</b></span>
+                    <span *ngIf="phone.errors.minlength"><b>Phone number must be 10 digits</b></span>
+                    
+                  </div>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div style="margin-left: 35%;">
+          <button class="btn btn-warning" id="submit" style="font-size:5;" [disabled]="!registration.valid"><b id="plane" style="text-shadow: 1px 1px black;">Submit</b> <i class="fas fa-paper-plane" id="plane"></i></button>  
+          <button class="btn btn-primary" id="reset" (click)="registration.resetForm()" > <i class="fas fa-redo" id="resetlogo"></i></button>
+        </div>
+        </form>
+        
+      </div>
+      
+    </div>
+    <div class="col-lg-3">
+
+      
+    </div>
+  </div>
+
+  
+
+
+  <!--
+    ****CDN'S***************CDN'S**********CDN'S************CDN'S***************CDN'S***************CDN'S*****************************************************************CDN'S*********************************CDN'S***************************CDN'S*********************************************************************CDN'S******************************CDN'S*****************CDN'S*****************************CDN'S******************CDN'S************CDN'S************************
+  -->
+  <!--jquery cdn-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!--popper cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <!--js cdn-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<router-outlet></router-outlet>
