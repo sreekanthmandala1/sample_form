@@ -3,7 +3,7 @@
   height:640px;
   background-color:lightblue;
   border:2px solid darkcyan;
-  margin:5px 0px 5px 0px;
+  
 }
 
 #besideinput{
@@ -14,12 +14,12 @@
 }
 #submit{
   padding:5px 30px 5px 30px;
-  margin-right:10px;
+  
 }
 #registration{
   font-size:30;
-  margin:2% 0px 3% 0px;
-  margin-left:20%;
+  
+  
 }
 #reset{
   padding:4px 8px ;
@@ -31,14 +31,12 @@ input.ng-valid.ng-touched{
   border:2px solid green;
 }
 #phonemust{
-  margin:8px 0px 0px 5px;
+  
   color:red;
 }
 
 
-#one i { 
-  
-} 
+
 
 
 
