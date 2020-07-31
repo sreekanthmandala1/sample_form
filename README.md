@@ -1,7 +1,3 @@
-# access from here
-
-https://sreekanthmandala1.github.io/sample_form/
-
 # Registrationform
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.10.
