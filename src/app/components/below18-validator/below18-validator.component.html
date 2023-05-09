@@ -1,0 +1,6 @@
+<div>
+  <input type="date" (change)="onDateChange($event)"/>
+  <div *ngIf="lessThanEighteen">
+    should be greater than 18 years
+  </div>
+</div>

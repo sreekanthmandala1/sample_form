@@ -3,15 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Below18ValidatorComponent } from './components/below18-validator/below18-validator.component';
+import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Below18ValidatorComponent,
+    RegistrationFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
