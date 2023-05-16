@@ -21,23 +21,17 @@ export class Below18ValidatorComponent {
     return this.validatorForm.get('name');
   }
 
-  onSubmit() {
-    if (this.validatorForm.valid) {
-      alert('age should be greater than 18');
-      return false;
-    }
-  }
-
   onDateChange(e: any) {
+    debugger
     this.selectedDate = e.target.value
     const birthdate = new Date(this.selectedDate);
     const today = new Date();
     const diff = today.getTime() - birthdate.getTime();
     const yearDiff = diff / (1000 * 60 * 60 * 24 * 365.25);
-    if (!this.validatorForm.valid && yearDiff < 18) {
+    if (yearDiff < 18) {
       this.lessThanEighteen = true
       return false;
-    } else if (!this.validatorForm.valid && yearDiff > 18) {
+    } else if (yearDiff > 18) {
       this.lessThanEighteen = false
     }
   }
